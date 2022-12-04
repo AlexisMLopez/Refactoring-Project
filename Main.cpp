@@ -37,8 +37,7 @@ auto main()->int
 			user_input = professor.ProfessorChoice();
 
 			if (user_input == 1) {
-				course.PrintAssignments();
-				course.PrintCourse();
+				course.PrintAll();
 				professor.EnterStudentName(student);
 				professor.SetGrades(student);
 

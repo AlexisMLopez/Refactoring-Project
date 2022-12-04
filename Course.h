@@ -38,5 +38,6 @@ public:
 	// member methods
 	void PrintAssignments();
 	void PrintCourse();
+	void PrintAll();
 };
 #endif // COURSE_H

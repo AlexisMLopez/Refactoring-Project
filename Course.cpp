@@ -47,6 +47,10 @@ void Course::PrintAssignments() {
  * displays either the modified or unmodified course.
 */
 void Course::PrintCourse() {
-
 	std::cout << "For the course: " << m_course << std::endl;
+}
+
+void Course::PrintAll() {
+	PrintCourse();
+	PrintAssignments();
 }
