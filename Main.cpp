@@ -24,7 +24,6 @@ auto main()->int
 	// Creation of course class object using overloaded constructor
 	Course course("COP 3003");
 
-	bool system_on = true;
 	int switch_input = 0;
 	int user_input = 0;
 
@@ -34,7 +33,7 @@ auto main()->int
 
 	switch (switch_input) {
 	case 1:
-		while (system_on) {
+		while (true) {
 			user_input = professor.ProfessorChoice();
 
 			if (user_input == 1) {
@@ -59,7 +58,7 @@ auto main()->int
 			}
 			else if (user_input == 5) {
 				// exits while loop
-				system_on = false;
+				break;
 			}
 			else {
 				std::cout << std::endl;
@@ -69,7 +68,7 @@ auto main()->int
 		}
 		break;
 	case 2:
-		while (system_on) {
+		while (true) {
 			user_input = student.StudentChoice();
 			if (user_input == 1) {
 				student.ViewGrades();
@@ -85,7 +84,7 @@ auto main()->int
 			}
 			else {
 				// exits while loop
-				system_on = false;
+				break;
 			}
 		}
 		break;
