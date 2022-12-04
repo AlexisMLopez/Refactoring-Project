@@ -39,5 +39,6 @@ public:
 	void PrintAssignments();
 	void PrintCourse();
 	void PrintAll();
+	void Greeting();
 };
 #endif // COURSE_H

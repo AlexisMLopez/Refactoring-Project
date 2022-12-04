@@ -50,7 +50,22 @@ void Course::PrintCourse() {
 	std::cout << "For the course: " << m_course << std::endl;
 }
 
+/**
+ * @brief Prints the course and the assignments
+*/
 void Course::PrintAll() {
 	PrintCourse();
 	PrintAssignments();
+}
+
+/**
+ * @brief A simple greeting for the user, that prompts them to select if they are either a student or professor.
+*/
+void Course::Greeting() {
+	std::cout << "---------------------------------------------" << std::endl;
+	std::cout << "Welcome to the Student Gradebook Program!" << std::endl;
+	std::cout << "Please select your user type:" << std::endl;
+	std::cout << "1: Professor Login" << std::endl;
+	std::cout << "2: Student Login" << std::endl;
+	std::cout << "---------------------------------------------" << std::endl;
 }

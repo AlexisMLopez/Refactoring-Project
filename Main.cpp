@@ -2,9 +2,6 @@
 #include "student.h"
 #include "professor.h"
 
-// function prototypes
-void Greeting();
-
 /**
  * @brief Dictates the control flow of the program.
  *
@@ -27,8 +24,8 @@ auto main()->int
 	int switch_input = 0;
 	int user_input = 0;
 
-	Greeting();
-
+	course.Greeting();
+	
 	std::cin >> switch_input;
 
 	switch (switch_input) {
@@ -93,16 +90,4 @@ auto main()->int
 	std::cout << "Exiting the program." << std::endl;
 
 	return 0;
-}
-
-/**
- * @brief A simple greeting for the user, that prompts them to select if they are either a student or professor.
-*/
-void Greeting() {
-	std::cout << "---------------------------------------------" << std::endl;
-	std::cout << "Welcome to the Student Gradebook Program!" << std::endl;
-	std::cout << "Please select your user type:" << std::endl;
-	std::cout << "1: Professor Login" << std::endl;
-	std::cout << "2: Student Login" << std::endl;
-	std::cout << "---------------------------------------------" << std::endl;
 }
