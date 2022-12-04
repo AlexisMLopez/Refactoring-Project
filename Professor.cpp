@@ -92,9 +92,12 @@ void Professor::SetGrades(Student& student) {
  * @param student - Student object that is passed by reference whose final_grade field is modified.
 */
 void Professor::CalculateCourseAverage(Student& student) {
-	double weighed_course_average = 0;
-	weighed_course_average = (student.student_grades.at(0) * quiz_weight) + (student.student_grades.at(1) * exam_weight)
-		+ (student.student_grades.at(2) * homework_weight) + (student.student_grades.at(3) * project_weight);
+	double quiz_average = (student.student_grades.at(0) * quiz_weight);
+	double exam_average = (student.student_grades.at(1) * exam_weight);
+	double homework_average = (student.student_grades.at(2) * homework_weight);
+	double project_average = (student.student_grades.at(3) * project_weight);
+	double weighed_course_average = quiz_average + exam_average + homework_average + project_average;
+
 	std::cout << "Final Grade: " << weighed_course_average << std::endl;
 	std::cout << std::endl;
 }

@@ -1,6 +1,12 @@
-#include <iostream>
+#include "ControlFlow.h"
 #include "student.h"
 #include "professor.h"
+#include "User.h"
+
+ControlFlow::ControlFlow() {
+	switch_input = 0;
+	user_input = 0;
+}
 
 /**
  * @brief Dictates the control flow of the program.
@@ -12,17 +18,13 @@
  *
  * @return void
 */
-auto main()->int
-{
+void ControlFlow::ProgramProcess() {
 	// Creation of an object of the Student class using default constructor
 	Student student;
 	// Creation of an object of the Professor class using default constructor
 	Professor professor;
 	// Creation of course class object using overloaded constructor
 	Course course("COP 3003");
-
-	int switch_input = 0;
-	int user_input = 0;
 
 	course.Greeting();
 
@@ -88,6 +90,4 @@ auto main()->int
 		std::cout << "You have made an incorrect login choice, terminating program." << std::endl;
 	}
 	std::cout << "Exiting the program." << std::endl;
-
-	return 0;
 }
