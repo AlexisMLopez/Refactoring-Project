@@ -32,5 +32,6 @@ public:
 	// member methods
 	void ViewGrades();
 	void UserType()override;
+	int StudentChoice();
 };
 #endif // STUDENT_H

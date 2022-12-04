@@ -91,10 +91,28 @@ void Professor::SetGrades(Student& student) {
  *
  * @param student - Student object that is passed by reference whose final_grade field is modified.
 */
-void Professor::CalculateFinalGrade(Student& student) {
+void Professor::CalculateCourseAverage(Student& student) {
 	double weighed_course_average = 0;
 	weighed_course_average = (student.student_grades.at(0) * quiz_weight) + (student.student_grades.at(1) * exam_weight)
 		+ (student.student_grades.at(2) * homework_weight) + (student.student_grades.at(3) * project_weight);
 	std::cout << "Final Grade: " << weighed_course_average << std::endl;
 	std::cout << std::endl;
+}
+
+/**
+ * @brief Prompts the a professor type user for a selection and uses it to dictate control flow of the program.
+ * @return professor_choice - professor input
+*/
+int Professor::ProfessorChoice() {
+	int professor_choice = 0;
+	std::cout << "Please make a selection:" << std::endl;
+	std::cout << "1: Enter Grades" << std::endl;
+	std::cout << "2: View Grades" << std::endl;
+	std::cout << "3: Calculate final grade of student" << std::endl;
+	std::cout << "4: Check user type" << std::endl;
+	std::cout << "5: Exit Program" << std::endl;
+	std::cout << std::endl;
+	std::cin >> professor_choice;
+
+	return professor_choice;
 }

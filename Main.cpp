@@ -3,8 +3,6 @@
 #include "professor.h"
 
 // function prototypes
-auto ProfessorChoice()->int;
-auto StudentChoice()->int;
 void Greeting();
 
 /**
@@ -37,7 +35,7 @@ auto main()->int
 	switch (switch_input) {
 	case 1:
 		while (system_on) {
-			user_input = ProfessorChoice();
+			user_input = professor.ProfessorChoice();
 
 			if (user_input == 1) {
 				course.PrintAssignments();
@@ -50,7 +48,7 @@ auto main()->int
 				professor.ViewGrades(student);
 			}
 			else if (user_input == 3) {
-				professor.CalculateFinalGrade(student);
+				professor.CalculateCourseAverage(student);
 
 			}
 			else if (user_input == 4) {
@@ -72,12 +70,12 @@ auto main()->int
 		break;
 	case 2:
 		while (system_on) {
-			user_input = StudentChoice();
+			user_input = student.StudentChoice();
 			if (user_input == 1) {
 				student.ViewGrades();
 			}
 			else if (user_input == 2) {
-				professor.CalculateFinalGrade(student);
+				professor.CalculateCourseAverage(student);
 			}
 			else if (user_input == 3) {
 				User user;
@@ -97,41 +95,6 @@ auto main()->int
 	std::cout << "Exiting the program." << std::endl;
 
 	return 0;
-}
-
-/**
- * @brief Prompts the a student type user for a selection and uses it to dictate control flow of the program.
- * @return student_choice - student input.
-*/
-auto StudentChoice() -> int {
-	int student_choice = 0;
-	std::cout << "Please make a selection:" << std::endl;
-	std::cout << "1: View Grades" << std::endl;
-	std::cout << "2: Calculate my final grade" << std::endl;
-	std::cout << "3: Check user type" << std::endl;
-	std::cout << "4: Exit Program" << std::endl;
-	std::cout << std::endl;
-	std::cin >> student_choice;
-
-	return student_choice;
-}
-
-/**
- * @brief Prompts the a professor type user for a selection and uses it to dictate control flow of the program.
- * @return professor_choice - professor input
-*/
-auto ProfessorChoice() -> int {
-	int professor_choice = 0;
-	std::cout << "Please make a selection:" << std::endl;
-	std::cout << "1: Enter Grades" << std::endl;
-	std::cout << "2: View Grades" << std::endl;
-	std::cout << "3: Calculate final grade of student" << std::endl;
-	std::cout << "4: Check user type" << std::endl;
-	std::cout << "5: Exit Program" << std::endl;
-	std::cout << std::endl;
-	std::cin >> professor_choice;
-
-	return professor_choice;
 }
 
 /**

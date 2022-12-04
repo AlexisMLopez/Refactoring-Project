@@ -38,6 +38,7 @@ public:
 	static void EnterStudentName(Student& student);
 	static void ViewGrades(Student student);
 	static void SetGrades(Student& student);
-	void CalculateFinalGrade(Student& student);
+	void CalculateCourseAverage(Student& student);
+	int ProfessorChoice();
 };
 #endif // PROFESSOR_H

@@ -46,3 +46,20 @@ void Student::UserType() {
 	std::cout << "This user is a student!" << std::endl;
 	std::cout << std::endl;
 }
+
+/**
+ * @brief Prompts the a student type user for a selection and uses it to dictate control flow of the program.
+ * @return student_choice - student input.
+*/
+int Student::StudentChoice() {
+	int student_choice = 0;
+	std::cout << "Please make a selection:" << std::endl;
+	std::cout << "1: View Grades" << std::endl;
+	std::cout << "2: Calculate my final grade" << std::endl;
+	std::cout << "3: Check user type" << std::endl;
+	std::cout << "4: Exit Program" << std::endl;
+	std::cout << std::endl;
+	std::cin >> student_choice;
+
+	return student_choice;
+}
