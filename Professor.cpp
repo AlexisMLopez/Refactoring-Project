@@ -8,7 +8,7 @@
 #include "professor.h"
 
 /**
- * @brief Default constructor - intializes member varaible to default value.
+ * @brief Default constructor - initializes member variable to default value.
  *
  * calls to the parent User class constructor to access public fields of the Student class
 */
@@ -54,7 +54,7 @@ void Professor::UserType() {
  *
  * @param student - Student object that we print out the values in the student_grades vector.
 */
-//LO7.Define and use iteratorsand other operations on aggregates, including operations that take functions as arguments.
+//LO7.Define and use iterators and other operations on aggregates, including operations that take functions as arguments.
 void Professor::ViewGrades(Student student) {                                               // Unique view_grades method to Professor class
 	std::cout << "You are viewing " << student.GetName() << " grades as a Professor." << std::endl;
 	for (int i = 0; i < student.student_grades.size(); i++) {
@@ -67,7 +67,7 @@ void Professor::ViewGrades(Student student) {                                   
 /**
  * @brief allows the professor to enter grades into grade Vector in Student class
  *
- * Assigns the proffessor's input as the student's grades in the student_grades vector.
+ * Assigns the professor's input as the student's grades in the student_grades vector.
  *
  * @param student - Student object passed into the function by reference to modify values in student_grades vector in Student class
 */
@@ -92,13 +92,8 @@ void Professor::SetGrades(Student& student) {
  * @param student - Student object that is passed by reference whose final_grade field is modified.
 */
 void Professor::CalculateCourseAverage(Student& student) {
-	double quiz_average = (student.student_grades.at(0) * quiz_weight);
-	double exam_average = (student.student_grades.at(1) * exam_weight);
-	double homework_average = (student.student_grades.at(2) * homework_weight);
-	double project_average = (student.student_grades.at(3) * project_weight);
-	double weighed_course_average = quiz_average + exam_average + homework_average + project_average;
-
-	std::cout << "Final Grade: " << weighed_course_average << std::endl;
+	std::cout << "Final Grade: " << student.student_grades.at(0) * quiz_weight + student.student_grades.at(1) * 
+		exam_weight + student.student_grades.at(2) * homework_weight + student.student_grades.at(3) * project_weight << std::endl;
 	std::cout << std::endl;
 }
 
