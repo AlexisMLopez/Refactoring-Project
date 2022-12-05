@@ -2,6 +2,24 @@
 #include "student.h"
 #include "professor.h"
 
+// method prototypes
+void control_flow(Student student, Professor professor, Course course);
+
+
+int main()
+{
+	// Creation of an object of the Student class using default constructor
+	Student student;
+	// Creation of an object of the Professor class using default constructor
+	Professor professor;
+	// Creation of course class object using overloaded constructor
+	Course course("COP 3003");
+
+	control_flow(student, professor, course);
+
+	return 0;
+}
+
 /**
  * @brief Dictates the control flow of the program.
  *
@@ -12,15 +30,8 @@
  *
  * @return void
 */
-auto main() -> int
+void control_flow(Student student, Professor professor, Course course)
 {
-	// Creation of an object of the Student class using default constructor
-	Student student;
-	// Creation of an object of the Professor class using default constructor
-	Professor professor;
-	// Creation of course class object using overloaded constructor
-	Course course("COP 3003");
-
 	int switch_input = 0;
 	int user_input = 0;
 
@@ -98,6 +109,4 @@ auto main() -> int
 		std::cout << "You have made an incorrect login choice, terminating program." << std::endl;
 	}
 	std::cout << "Exiting the program." << std::endl;
-
-	return 0;
 }
