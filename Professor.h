@@ -10,7 +10,6 @@
 
 #include "user.h"
 #include "student.h"
-#include "course.h"
 
 /**
  * @brief A Professor class that represents a user.
@@ -31,7 +30,7 @@ private:
 
 public:
 	//default constructor
-	Professor()noexcept;
+	Professor() noexcept;
 
 	// member methods
 	void UserType() override;

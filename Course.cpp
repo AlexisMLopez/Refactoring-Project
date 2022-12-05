@@ -24,7 +24,8 @@ Course::Course()
  * Sets the member variable equal to the parameter value in the Course class.
 */
 //LO1b.Overload a constructor
-Course::Course(std::string course_name) {
+Course::Course(std::string course_name)
+{
 	m_course = course_name;
 }
 
@@ -33,9 +34,11 @@ Course::Course(std::string course_name) {
  *
  * Simply displays the ordering of how assignment grades should be inputted.
 */
-void Course::PrintAssignments() {
+void Course::PrintAssignments()
+{
 	std::cout << "Grades are placed in the following format: " << std::endl;
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; i++)
+	{
 		std::cout << "[" << assignments[i] << "]" << " ";
 	}
 	std::cout << std::endl;
@@ -46,14 +49,16 @@ void Course::PrintAssignments() {
  *
  * displays either the modified or unmodified course.
 */
-void Course::PrintCourse() {
+void Course::PrintCourse()
+{
 	std::cout << "For the course: " << m_course << std::endl;
 }
 
 /**
  * @brief Prints the course and the assignments
 */
-void Course::PrintAll() {
+void Course::PrintAll()
+{
 	PrintCourse();
 	PrintAssignments();
 }
@@ -61,9 +66,10 @@ void Course::PrintAll() {
 /**
  * @brief A simple greeting for the user, that prompts them to select if they are either a student or professor.
 */
-void Course::Greeting() {
+void Course::Greeting()
+{
 	std::cout << "---------------------------------------------" << std::endl;
-	std::cout << "Welcome to the Student Gradebook Program!" << std::endl;
+	std::cout << "Welcome to the Student Grade-book Program!" << std::endl;
 	std::cout << "Please select your user type:" << std::endl;
 	std::cout << "1: Professor Login" << std::endl;
 	std::cout << "2: Student Login" << std::endl;

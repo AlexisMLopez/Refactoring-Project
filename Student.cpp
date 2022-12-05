@@ -9,12 +9,12 @@
 
 // default constructor
 /**
- * @brief Default constructor - intializes variables to a default values.
+ * @brief Default constructor - initializes variables to a default values.
  *
  * Sets the final_grade variable to a default value of zero in order to
- * mitigate posssible errors.
+ * mitigate possible errors.
 */
-Student::Student()noexcept
+Student::Student() noexcept
 {
 	final_grade = 0;
 }
@@ -26,9 +26,11 @@ Student::Student()noexcept
  * Loops through the aggregate structure by utilizing the iterator.
  * Prints out every element of the vector based on iterator.
 */
-void Student::ViewGrades() {
+void Student::ViewGrades()
+{
 	std::cout << "You are viewing your grades as a Student" << std::endl;
-	for (int i = 0; i < student_grades.size(); i++) {
+	for (int i = 0; i < student_grades.size(); i++)
+	{
 		std::cout << student_grades.at(i) << " ";
 	}
 	std::cout << std::endl;
@@ -42,7 +44,8 @@ void Student::ViewGrades() {
  *
 */
 //LO3. Correctly reason about control flow in a program using dynamic dispatch.
-void Student::UserType() {
+void Student::UserType()
+{
 	std::cout << "This user is a student!" << std::endl;
 	std::cout << std::endl;
 }
@@ -51,7 +54,8 @@ void Student::UserType() {
  * @brief Prompts the a student type user for a selection and uses it to dictate control flow of the program.
  * @return student_choice - student input.
 */
-int Student::StudentChoice() {
+int Student::StudentChoice()
+{
 	int student_choice = 0;
 	std::cout << "Please make a selection:" << std::endl;
 	std::cout << "1: View Grades" << std::endl;

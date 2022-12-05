@@ -2,33 +2,17 @@
 #include "student.h"
 #include "professor.h"
 
-class Singleton
-{
-protected:
-	Singleton() = default;
-
-public:
-	int data;
-
-	static Singleton& get_instance()
-	{
-		static Singleton instance;
-		return instance;
-	}
-};
-
-
 /**
  * @brief Dictates the control flow of the program.
  *
  * Utilizes fields and member methods in each distinct class (Course, User, Professor, Student)
- * order to record a student gradebook entry for one course.
+ * order to record a student grade-book entry for one course.
  *
  * Each user is split between each portion of a specific control flow. (Professor or Student).
  *
  * @return void
 */
-auto main()->int
+auto main() -> int
 {
 	// Creation of an object of the Student class using default constructor
 	Student student;
@@ -44,57 +28,67 @@ auto main()->int
 
 	std::cin >> switch_input;
 
-	switch (switch_input) {
+	switch (switch_input)
+	{
 	case 1:
-		while (true) {
+		while (true)
+		{
 			user_input = professor.ProfessorChoice();
 
-			if (user_input == 1) {
+			if (user_input == 1)
+			{
 				course.PrintAll();
 				professor.EnterStudentName(student);
 				professor.SetGrades(student);
-
 			}
-			else if (user_input == 2) {
+			else if (user_input == 2)
+			{
 				professor.ViewGrades(student);
 			}
-			else if (user_input == 3) {
+			else if (user_input == 3)
+			{
 				professor.CalculateCourseAverage(student);
-
 			}
-			else if (user_input == 4) {
+			else if (user_input == 4)
+			{
 				User user;
 				User& usertype2 = professor;
 				//LO3. Correctly reason about control flow in a program using dynamic dispatch. 
 				usertype2.UserType();
 			}
-			else if (user_input == 5) {
+			else if (user_input == 5)
+			{
 				// exits while loop
 				break;
 			}
-			else {
+			else
+			{
 				std::cout << std::endl;
 				std::cout << "You made an invalid choice, try again" << std::endl;
 			}
-
 		}
 		break;
 	case 2:
-		while (true) {
+		while (true)
+		{
 			user_input = student.StudentChoice();
-			if (user_input == 1) {
+			if (user_input == 1)
+			{
 				student.ViewGrades();
 			}
-			else if (user_input == 2) {
+			else if (user_input == 2)
+			{
 				professor.CalculateCourseAverage(student);
 			}
-			else if (user_input == 3) {
+			else if (user_input == 3)
+			{
 				User user;
 				User& usertype1 = student;
 				//LO3. Correctly reason about control flow in a program using dynamic dispatch. 
 				usertype1.UserType();
 			}
-			else {
+			else
+			{
 				// exits while loop
 				break;
 			}

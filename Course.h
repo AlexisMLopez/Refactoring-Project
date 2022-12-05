@@ -27,7 +27,7 @@ private:
 	std::string m_course;
 
 public:
-	const std::string assignments[4] = { "Quiz", "Exam", "Homework", "Project" };
+	const std::string assignments[4] = {"Quiz", "Exam", "Homework", "Project"};
 
 	//default constructor
 	Course();

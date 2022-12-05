@@ -5,7 +5,7 @@
 * @author Alexis Lopez
 * @bug no known bugs.
 */
-#ifndef USER_H 
+#ifndef USER_H
 #define USER_H
 
 #include <iostream>
@@ -18,7 +18,8 @@
  *
  * This User class is used to define fields and methods that used by all types of users.
 */
-class User : public Course {
+class User : public Course
+{
 	//private fields
 private:
 	std::string m_idnum;
@@ -26,7 +27,7 @@ private:
 
 public:
 	// default constructor
-	User()noexcept;
+	User() noexcept;
 
 	// properties constructor
 	User(std::string idnum);
@@ -35,13 +36,12 @@ public:
 	// Enables us to achieve dynamic dispatch which allows us to select which implementation of a polymorphic function that we want at runtime 
 	virtual void UserType();
 
-	auto GetName()->std::string;
+	std::string GetName();
 	void SetName(std::string name);
 
 protected:
 	//std::string GetIdnum();
-	auto GetIdnum()->std::string;
+	std::string GetIdnum();
 	void SetIdnum(std::string idnum);
-
 };
 #endif // USER_H

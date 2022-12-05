@@ -12,7 +12,7 @@
  *
  * calls to the parent User class constructor to access public fields of the Student class
 */
-Professor::Professor()noexcept : User()
+Professor::Professor() noexcept : User()
 {
 	total_weight = 0;
 }
@@ -26,7 +26,8 @@ Professor::Professor()noexcept : User()
  * @param student - student object passed to modify m_name field.
 */
 //LO1a.At least one class in a header file with non - trivial methods implemented in a cpp file
-void Professor::EnterStudentName(Student& student) {
+void Professor::EnterStudentName(Student& student)
+{
 	std::cout << "Please enter the student's name: ";
 	std::string name;
 	std::cin >> name;
@@ -41,7 +42,8 @@ void Professor::EnterStudentName(Student& student) {
  *
 */
 //LO3. Correctly reason about control flow in a program using dynamic dispatch. 
-void Professor::UserType() {
+void Professor::UserType()
+{
 	std::cout << "This user is a professor!" << std::endl;
 	std::cout << std::endl;
 }
@@ -55,9 +57,12 @@ void Professor::UserType() {
  * @param student - Student object that we print out the values in the student_grades vector.
 */
 //LO7.Define and use iterators and other operations on aggregates, including operations that take functions as arguments.
-void Professor::ViewGrades(Student student) {                                               // Unique view_grades method to Professor class
+void Professor::ViewGrades(Student student)
+{
+	// Unique view_grades method to Professor class
 	std::cout << "You are viewing " << student.GetName() << " grades as a Professor." << std::endl;
-	for (int i = 0; i < student.student_grades.size(); i++) {
+	for (int i = 0; i < student.student_grades.size(); i++)
+	{
 		std::cout << student.student_grades.at(i) << " ";
 	}
 	std::cout << std::endl;
@@ -72,10 +77,12 @@ void Professor::ViewGrades(Student student) {                                   
  * @param student - Student object passed into the function by reference to modify values in student_grades vector in Student class
 */
 //LO7.Define and use iterators and other operations on aggregates, including operations that take functions as arguments.
-void Professor::SetGrades(Student& student) {
+void Professor::SetGrades(Student& student)
+{
 	double temp = 0;
 	std::cout << "You are entering grades for " << student.GetName() << "." << std::endl;
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; i++)
+	{
 		std::cin >> temp;
 		student.student_grades[i] = temp;
 	}
@@ -91,9 +98,11 @@ void Professor::SetGrades(Student& student) {
  *
  * @param student - Student object that is passed by reference whose final_grade field is modified.
 */
-void Professor::CalculateCourseAverage(Student& student) {
-	std::cout << "Final Grade: " << student.student_grades.at(0) * quiz_weight + student.student_grades.at(1) * 
-		exam_weight + student.student_grades.at(2) * homework_weight + student.student_grades.at(3) * project_weight << std::endl;
+void Professor::CalculateCourseAverage(Student& student)
+{
+	std::cout << "Final Grade: " << student.student_grades.at(0) * quiz_weight + student.student_grades.at(1) *
+		exam_weight + student.student_grades.at(2) * homework_weight + student.student_grades.at(3) * project_weight <<
+		std::endl;
 	std::cout << std::endl;
 }
 
@@ -101,7 +110,8 @@ void Professor::CalculateCourseAverage(Student& student) {
  * @brief Prompts the a professor type user for a selection and uses it to dictate control flow of the program.
  * @return professor_choice - professor input
 */
-int Professor::ProfessorChoice() {
+int Professor::ProfessorChoice()
+{
 	int professor_choice = 0;
 	std::cout << "Please make a selection:" << std::endl;
 	std::cout << "1: Enter Grades" << std::endl;

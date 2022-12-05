@@ -16,22 +16,22 @@
  * This Student class inherits fields and methods from the User class.
  * This class also implements unique functions that only a Student user would have access to.
 */
-//LO2.Use subclassing to design simple class hierarchies that allow code to be reused for distinct subclasses.
+//LO2.Use sub-classing to design simple class hierarchies that allow code to be reused for distinct subclasses.
 class Student : public User
 {
 private:
 	double final_grade;
 
 public:
-	// vector via list initialziation used for storing the course grades of a student.
-	std::vector<double> student_grades = { 0,0,0,0 };
+	// vector via list initialization used for storing the course grades of a student.
+	std::vector<double> student_grades = {0, 0, 0, 0};
 
-	// default student contructor
-	Student()noexcept;
+	// default student constructor
+	Student() noexcept;
 
 	// member methods
 	void ViewGrades();
-	void UserType()override;
+	void UserType() override;
 	int StudentChoice();
 };
 #endif // STUDENT_H
