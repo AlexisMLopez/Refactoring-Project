@@ -31,19 +31,17 @@ public:
 	// properties constructor
 	User(std::string idnum);
 
-	// getters and setters
+	// virtual function header makes it so the view_grades function in the User class is overriden and instead executes the subclass versions of view_grades()
+	// Enables us to achieve dynamic dispatch which allows us to select which implementation of a polymorphic function that we want at runtime 
+	virtual void UserType();
+
+	auto GetName()->std::string;
+	void SetName(std::string name);
+
+protected:
 	//std::string GetIdnum();
 	auto GetIdnum()->std::string;
 	void SetIdnum(std::string idnum);
 
-
-	//std::string GetName();
-	auto GetName()->std::string;
-	void SetName(std::string name);
-
-	// member methods
-	// virtual function header makes it so the view_grades function in the User class is overriden and instead executes the subclass versions of view_grades()
-	// Enables us to achieve dynamic dispatch which allows us to select which implementation of a polymorphic function that we want at runtime 
-	virtual void UserType();
 };
 #endif // USER_H

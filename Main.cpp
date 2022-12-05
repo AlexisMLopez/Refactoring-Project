@@ -2,6 +2,22 @@
 #include "student.h"
 #include "professor.h"
 
+class Singleton
+{
+protected:
+	Singleton() = default;
+
+public:
+	int data;
+
+	static Singleton& get_instance()
+	{
+		static Singleton instance;
+		return instance;
+	}
+};
+
+
 /**
  * @brief Dictates the control flow of the program.
  *
