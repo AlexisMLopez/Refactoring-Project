@@ -7,11 +7,7 @@ For this project, I implement OOP skills to create a console application using C
 ![Animation](https://user-images.githubusercontent.com/74120068/146275291-18ac62a6-b0a7-4d40-a8f0-a149b27c2ef8.gif)
 
 
-## Documentation
-
-https://amlopez5841.github.io/Integration-Project/html/
-
-## Diagrams
+## UML Diagrams Before Refactoring
 
 Course <br /> 
 ![course](https://user-images.githubusercontent.com/74120068/146281051-c1d74eab-a1de-44f4-99fb-55706b2c2344.png)
@@ -28,6 +24,14 @@ Professor <br />
 Student <br /> 
 ![student](https://user-images.githubusercontent.com/74120068/146281077-8e203064-2cfc-4cc1-b2c5-527500c0153b.png)
 
+
+## UML Diagrams After Refactoring
+![GradeBook Project](https://user-images.githubusercontent.com/74120068/206922946-c410a181-d140-49cd-a63a-5009bcd89352.png)
+
+
+## Documentation
+
+https://amlopez5841.github.io/Integration-Project/html/
 
 
 ## Getting Started
