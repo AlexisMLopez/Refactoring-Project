@@ -25,7 +25,7 @@ Student <br />
 ![student](https://user-images.githubusercontent.com/74120068/146281077-8e203064-2cfc-4cc1-b2c5-527500c0153b.png)
 
 
-## UML Diagrams After Refactoring
+## UML Diagram After Refactoring
 ![GradeBook Project](https://user-images.githubusercontent.com/74120068/206922946-c410a181-d140-49cd-a63a-5009bcd89352.png)
 
 
